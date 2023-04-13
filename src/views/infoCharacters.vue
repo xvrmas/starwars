@@ -33,12 +33,21 @@
                 </div>
             </div>
         </div>
+        <relatedFilms></relatedFilms>
+        <relatedStarships></relatedStarships>
+        <relatedVehicles></relatedVehicles>
+        <relatedSpecies></relatedSpecies>
     </div>
 </template>
 <script>
 import { mapGetters } from 'vuex'
+import relatedFilms from '@/components/relatedFilms.vue';
+import relatedStarships from '@/components/relatedStarships.vue';
+import relatedVehicles from '@/components/relatedVehicles.vue';
+import relatedSpecies from '@/components/relatedSpecies.vue';
 export default {
     name: 'infoCharacters',
+    components: {relatedFilms,relatedStarships, relatedVehicles, relatedSpecies},
     computed: {
         ...mapGetters(['getInfoCharacters']),
 
