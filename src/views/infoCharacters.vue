@@ -37,20 +37,15 @@
 </template>
 <script>
 import { mapGetters } from 'vuex'
-import relatedFilms from '@/components/relatedFilms.vue'
-import relatedPlanets from '@/components/relatedPlanets.vue';
-import relatedSpecies from '@/components/relatedSpecies.vue';
-import relatedStarships from '@/components/relatedStarships.vue';
-import relatedvehicles from '@/components/relatedVehicles.vue';
 export default {
     name: 'infoCharacters',
-    components: { relatedPlanets, relatedSpecies, relatedStarships, relatedvehicles, relatedFilms },
     computed: {
         ...mapGetters(['getInfoCharacters']),
 
     },
     mounted() {
         document.getElementById("op2").style.borderBottom = 'solid rgb(191, 147, 0) 3px';
+
     },
     destroyed() {
         document.getElementById("op2").style.borderBottom = 'none';

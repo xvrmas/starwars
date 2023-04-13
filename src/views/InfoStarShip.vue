@@ -40,7 +40,6 @@
                 <div class="column"></div>
             </div>
             <button @click="retroceder" class="button is-dark">Go back</button>
-
         </div>
     </div>
 </template>

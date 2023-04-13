@@ -18,20 +18,17 @@
                         <p><strong>Surface water: </strong> {{ getInfoPlanets.surface_water }}</p>
                     </div>
                     <button @click="retroceder" class="button is-dark">Go back</button>
-                             
+                            
                 </div>
             </div>
-
         </div>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import relatedFilms from '@/components/relatedFilms.vue';
 export default {
     name: 'infoPlanets',
-    components:{relatedFilms},
     computed: {
         ...mapGetters(['getInfoPlanets']),
 
