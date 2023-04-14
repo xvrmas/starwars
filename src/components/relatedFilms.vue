@@ -39,6 +39,11 @@ export default {
 
     methods: {
         setInfo(item) {
+            this.$store.state.infoCharacters = item
+            this.$store.state.infoFilm = item
+            this.$store.state.infoStarships = item
+            this.$store.state.infoVehicles = item
+            this.$store.state.infoSpecies = item
             this.$router.push('/infoFilms')
             this.$store.dispatch('GET_INFOFILMS', item)
 

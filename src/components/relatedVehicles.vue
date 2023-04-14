@@ -42,6 +42,11 @@ export default {
             e.target.src = notImg
         },
         setInfovehicles(item) {
+            this.$store.state.infoCharacters = item
+            this.$store.state.infoFilm = item
+            this.$store.state.infoStarships = item
+            this.$store.state.infoVehicles = item
+            this.$store.state.infoSpecies = item
             this.$router.push('/infoVehicles')
             this.$store.dispatch('GET_INFOVEHICLES', item)
 

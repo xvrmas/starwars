@@ -24,16 +24,20 @@
                     <button @click="retroceder" class="button is-dark">Go back</button>
                    
                 </div>
+                <relatedFilms></relatedFilms>
+                <relatedCharacters></relatedCharacters>
             </div>
-
         </div>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
+import relatedFilms from '@/components/relatedFilms.vue';
+import relatedCharacters from '@/components/relatedCharacters.vue';
 export default {
     name: 'infoSpecies',
+    components:{relatedCharacters,relatedFilms},
     computed: {
         ...mapGetters(['getInfoSpecies'])
     },
