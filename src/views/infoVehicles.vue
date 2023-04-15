@@ -22,7 +22,6 @@
                     <div class="column">
                         <relatedFilms></relatedFilms>
                     </div>
-                    <button @click="retroceder" class="button is-dark">Go back</button>
                 </div>
             </div>
         </div>

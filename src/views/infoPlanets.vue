@@ -19,7 +19,6 @@
                         <p><strong>Surface water: </strong> {{ getInfoPlanets.surface_water }}</p>
                     </div>
                     <relatedFilms></relatedFilms>
-                    <button @click="retroceder" class="button is-dark">Go back</button>
                 </div>
             </div>
 
