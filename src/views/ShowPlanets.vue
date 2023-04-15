@@ -43,13 +43,7 @@ export default {
 
     methods: {
         setInfoPlanets(item) {
-            this.$store.state.infoCharacters = item
-            this.$store.state.infoFilm = item
-            this.$store.state.infoStarships = item
-            this.$store.state.infoVehicles = item
-            this.$store.state.infoSpecies = item
             this.$store.state.infoPlanets = item
-            console.log(item)
             this.$router.push('/infoPlanets')
         },
         setInfoFilms(item) {

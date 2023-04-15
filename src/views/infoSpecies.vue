@@ -1,5 +1,4 @@
 <template>
-
     <div class="caixa">
         <div class="container p-5">
             <div class="columns">
@@ -22,10 +21,7 @@
                         <p><strong>Languaje: </strong> {{ getInfoSpecies.language }}</p>
                     </div>
                     <button @click="retroceder" class="button is-dark">Go back</button>
-                   
                 </div>
-                <relatedFilms></relatedFilms>
-                <relatedCharacters></relatedCharacters>
             </div>
         </div>
     </div>
@@ -33,11 +29,8 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import relatedFilms from '@/components/relatedFilms.vue';
-import relatedCharacters from '@/components/relatedCharacters.vue';
 export default {
     name: 'infoSpecies',
-    components:{relatedCharacters,relatedFilms},
     computed: {
         ...mapGetters(['getInfoSpecies'])
     },
@@ -55,9 +48,10 @@ export default {
 }
 </script>
 <style>
-.caixa{
+.caixa {
     background-color: black;
 }
+
 strong {
     color: rgb(174, 171, 171);
 }

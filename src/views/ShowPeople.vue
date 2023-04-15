@@ -42,11 +42,7 @@ export default {
 
     methods: {
         setInfoFilms(item) {
-            this.$store.state.infoCharacters = item
-            this.$store.state.infoFilm = item
-            this.$store.state.infoStarships = item
-            this.$store.state.infoVehicles = item
-            this.$store.state.infoSpecies = item
+            this.$store.state.infoCharacters = item        
             this.$router.push('/infoCharacters')
         },
         increasePage() {
