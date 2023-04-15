@@ -18,7 +18,7 @@
                     </div>
                     <div class="column">
                         <relatedCharacters></relatedCharacters>
-                        <!-- <relatedSpecies></relatedSpecies>-->
+                        <relatedSpecies></relatedSpecies>
                         <relatedPlanets></relatedPlanets>
                     </div>
                     <div class="column">
