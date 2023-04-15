@@ -29,6 +29,7 @@
                             getInfoCharacters.mass
                         }} Kgr.</p>
                     </div>
+                    <relatedFilms></relatedFilms>
                     <button @click="retroceder" class="button is-dark">Go back</button>
                 </div>
             </div>

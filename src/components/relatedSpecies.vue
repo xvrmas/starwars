@@ -36,6 +36,8 @@ export default {
     },
     methods: {
         setInfoSpecies(item) {
+            this.$store.state.infoFilm = item
+            this.$store.state.infoSpecies = item
             this.$router.push('/infoSpecies')
             this.$store.dispatch('GET_INFOSPECIES', item)
         },

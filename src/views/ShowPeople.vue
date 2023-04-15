@@ -9,7 +9,7 @@
                                 <img :src="require(`@/assets/characters/${item.url.split(/\D/g).join('')}.jpg`)"
                                     alt="image film">
                             </figure>
-                            <a class="nav-link" @click="setInfoFilms(item)">
+                            <a class="nav-link" @click="setInfoFilms(item),getFilms(item)">
                                 <p style="color:gray" class="title is-size-5">{{
                                     item.name
                                 }}</p>
@@ -44,6 +44,10 @@ export default {
         setInfoFilms(item) {
             this.$store.state.infoCharacters = item
             this.$router.push('/infoCharacters')
+        },
+        getFilms(item) {
+            this.$store.state.infoFilm = item
+            console.log('show vehicles', item)
         },
         increasePage() {
             this.$store.state.pagePeople++;

@@ -40,6 +40,8 @@ export default {
             e.target.src = notImg
         },
         setInfoStarships(item) {
+            this.$store.state.infoFilm = item
+            this.$store.state.infoStarships = item
             this.$router.push('/infoStarShip')
             this.$store.dispatch('GET_INFOSTARSHIPS', item)
         },

@@ -17,9 +17,9 @@
                         <p><strong>Synopsis: </strong>{{ infoFilm.opening_crawl }}</p>
                     </div>
                     <div class="column">
-                        <relatedSpecies></relatedSpecies>
-                        <relatedPlanets></relatedPlanets>
                         <relatedCharacters></relatedCharacters>
+                        <!-- <relatedSpecies></relatedSpecies>-->
+                        <relatedPlanets></relatedPlanets>
                     </div>
                     <div class="column">
                         <relatedStarships></relatedStarships>
@@ -44,9 +44,9 @@ export default {
     computed: {
         ...mapState(['infoFilm']),
         ...mapGetters(['getImageFilm']),
-        orderDate(){
-           let order =  this.infoFilm.release_date.split('-').reverse().join('-')
-           return order;
+        orderDate() {
+            let order = this.infoFilm.release_date.split('-').reverse().join('-')
+            return order;
         }
     },
     mounted() {
@@ -69,5 +69,4 @@ strong {
 .caixa {
     background-color: black;
 }
-
 </style>

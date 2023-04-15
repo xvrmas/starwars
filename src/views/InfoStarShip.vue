@@ -1,55 +1,46 @@
 <template>
     <div class="caixa">
-        <div class="text-white">
-            <p class="is-size-3 is-start is-family-sans-serif has-text-grey-lighter mb-4">{{ getInfoShips.name }}</p>
-            <div class="caixaImatge">
-                <img :src="getImageShips">
-            </div>
-            <div class="columns mt-4">
-                <div class="column"></div>
-
-                <div class="column is-family-monospace is-size-5 has-text-left-desktop">
-                    <h6>Model: <p>{{ getInfoShips.model }}</p>
-                    </h6><br>
-                    <h6>Manufacturer: <p> {{ getInfoShips.manufacturer }}</p>
-                    </h6><br>
-                    <h6>Max speed: <p>{{ getInfoShips.max_atmosphering_speed }} Km/h</p>
-                    </h6><br>
-                    <h6>Cost: <p> {{ getInfoShips.cost_in_credits }} credits</p>
-                    </h6><br>
-                    <h6>Crew: <p>{{ getInfoShips.crew }}</p>
-                    </h6><br>
-                    <h6>Passengers: <p>{{ getInfoShips.passengers }}</p>
-                    </h6><br>
+        <div class="container p-5">
+            <div class="columns">
+                <div class="caixaImatge">
+                    <img :src="getImageShips">
                 </div>
-                <div class="column is-size-5 has-text-left-desktop">
-
-                    <h6>Length: <p>{{ getInfoShips.length }}</p>
-                    </h6><br>
-                    <h6>Cargo capacity: <p>{{ getInfoShips.cargo_capacity }}</p>
-                    </h6><br>
-                    <h6>Consumables: <p>{{ getInfoShips.consumables }}</p>
-                    </h6><br>
-                    <h6>Hyperdrive rating: <p>{{ getInfoShips.hyperdrive_rating }}</p>
-                    </h6><br>
-                    <h6>Starship class: <p> {{ getInfoShips.starship_class }}</p>
-                    </h6><br>
-                    <h6>MGLT: <p>{{ getInfoShips.MGLT }}</p>
-                    </h6>
+                <div class="column has-text-left is-half mt-3">
+                    <div class="box">
+                        <div class="column">
+                            <p><strong>Model:</strong> {{ getInfoShips.model }}</p>
+                            <p><strong>Manufacturer:</strong> {{ getInfoShips.manufacturer }}</p>
+                            <p><strong>Max speed:</strong> {{ getInfoShips.max_atmosphering_speed }} Km/h</p>
+                            <p><strong>Cost:</strong> {{ getInfoShips.cost_in_credits }} credits</p>
+                            <p><strong> Crew: </strong>{{ getInfoShips.crew }}</p>
+                            <p><strong> Passengers:</strong> {{ getInfoShips.passengers }}</p>
+                            <p><strong>Length:</strong> {{ getInfoShips.length }}</p>
+                            <p><strong>Cargo capacity:</strong> {{ getInfoShips.cargo_capacity }}</p>
+                            <p><strong>Consumables:</strong> {{ getInfoShips.consumables }}</p>
+                            <p><strong>Hyperdrive rating:</strong> {{ getInfoShips.hyperdrive_rating }}</p>
+                            <p><strong>Starship class: </strong> {{ getInfoShips.starship_class }}</p>
+                            <p><strong>MGLT:</strong> {{ getInfoShips.MGLT }}</p>
+                        </div>
+                        <!-- <div class="column">
+                            <relatedFilms></relatedFilms>
+                        </div> -->
+                    </div>
+                    <div class="column">
+                        <relatedFilms></relatedFilms>
+                    </div>
+                    <button @click="retroceder" class="button is-dark">Go back</button>
                 </div>
-                <div class="column"></div>
             </div>
-            <button @click="retroceder" class="button is-dark">Go back</button>
-
         </div>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-
+import relatedFilms from '@/components/relatedFilms.vue'
 export default {
     name: 'InfoStarShip',
+    components: { relatedFilms },
     computed: {
         ...mapGetters(['getImageShips', 'getInfoShips'])
     },
@@ -74,23 +65,20 @@ img {
     height: auto;
 }
 
+.box {
+    background-color: rgb(45, 45, 45);
+}
+
 .caixa {
     background-color: black;
 }
 
-.caixaImatge {
-    border-bottom: solid rgb(191, 147, 0) 1px;
-}
-
-.column {
-    color: aliceblue;
-}
-
-h6 {
-    color: gray;
+strong {
+    color: rgb(174, 171, 171);
 }
 
 p {
-    color: white;
+    color: rgb(133, 131, 131);
 }
+
 </style>

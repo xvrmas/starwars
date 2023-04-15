@@ -10,7 +10,7 @@
                                     alt="image film">
                             </figure>
                             <a class="nav-link">
-                                <p style="color:gray" @click="setInfoPlanets(item)" class="title is-size-5">{{
+                                <p style="color:gray" @click="setInfoPlanets(item),getFilms(item)" class="title is-size-5">{{
                                     item.name
                                 }}</p>
                             </a>
@@ -42,6 +42,9 @@ export default {
     },
 
     methods: {
+        getFilms(item) {
+            this.$store.state.infoFilm = item
+        },
         setInfoPlanets(item) {
             this.$store.state.infoPlanets = item
             this.$router.push('/infoPlanets')

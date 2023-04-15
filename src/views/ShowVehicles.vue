@@ -7,12 +7,13 @@
                         <div class="card-image">
                             <figure class="image">
                                 <img :src="(`https://starwars-visualguide.com/assets/img/vehicles/${item.url.split(/\D/g).join('')}.jpg`)"
-                                    @error ="setErrorImg" alt="image film">
+                                    @error="setErrorImg" alt="image film">
                             </figure>
                             <a class="nav-link">
-                                <p style="color:gray" @click="getInfoVehicles(item),  showImageVehicle(item)" class="title is-size-5">{{
-                                    item.name
-                                }} </p>
+                                <p style="color:gray" @click="getInfoVehicles(item), showImageVehicle(item), getFilms(item)"
+                                    class="title is-size-5">{{
+                                        item.name
+                                    }} </p>
 
                             </a>
                         </div>
@@ -51,6 +52,14 @@ export default {
             this.$store.state.infoVehicles = item
             this.$router.push('/infoVehicles')
         },
+        showImageVehicle: function (item) {
+            this.$store.state.numImg = item.url.split(/\D/g).join('')
+            this.$store.dispatch("GET_IMAGEVEHICLES", item)
+        },
+        getFilms(item) {
+            this.$store.state.infoFilm = item
+            console.log('show vehicles', item)
+        },
         increasePage() {
             this.$store.state.pageVehicles++;
             if (this.$store.state.pageVehicles > 4) {
@@ -65,10 +74,7 @@ export default {
             }
             this.$store.dispatch("GET_VEHICLES")
         },
-        showImageVehicle: function (item) {
-            this.$store.state.numImg = item.url.split(/\D/g).join('')
-            this.$store.dispatch("GET_IMAGEVEHICLES", item)
-        },
+      
 
     }
 

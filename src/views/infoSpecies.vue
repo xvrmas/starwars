@@ -1,5 +1,4 @@
 <template>
-
     <div class="caixa">
         <div class="container p-5">
             <div class="columns">
@@ -21,19 +20,22 @@
                         <p><strong>Eye color: </strong> {{ getInfoSpecies.eye_colors }}</p>
                         <p><strong>Languaje: </strong> {{ getInfoSpecies.language }}</p>
                     </div>
+                    <div class="column">
+                        <relatedFilms></relatedFilms>
+                    </div>
                     <button @click="retroceder" class="button is-dark">Go back</button>
-                   
                 </div>
             </div>
-
         </div>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
+import relatedFilms from '@/components/relatedFilms.vue'
 export default {
     name: 'infoSpecies',
+    components: { relatedFilms },
     computed: {
         ...mapGetters(['getInfoSpecies'])
     },
@@ -51,9 +53,10 @@ export default {
 }
 </script>
 <style>
-.caixa{
+.caixa {
     background-color: black;
 }
+
 strong {
     color: rgb(174, 171, 171);
 }

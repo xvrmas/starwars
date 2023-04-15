@@ -8,9 +8,9 @@
                             <div class="card-image">
                                 <figure class="image">
                                     <img :src="(`https://starwars-visualguide.com/assets/img/starships/${item.url.split(/\D/g).join('')}.jpg`)"
-                                    @error ="setErrorImg"   alt="image film">
+                                        @error="setErrorImg" alt="image film">
                                 </figure>
-                                <a class="nav-link" @click="setInfoShip(item), showImageShip(item)">
+                                <a class="nav-link" @click="setInfoShip(item), showImageShip(item), getFilms(item)">
                                     <p style="color:gray" class="title is-size-5">{{ item.name }}
                                     </p>
                                 </a>
@@ -43,6 +43,9 @@ export default {
     methods: {
         setErrorImg(e) {
             e.target.src = notImg
+        },
+        getFilms(item) {
+            this.$store.state.infoFilm = item
         },
         setInfoShip(item) {
             this.$store.state.infoTechShip = item
