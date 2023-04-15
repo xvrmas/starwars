@@ -3,7 +3,8 @@
         <div class="container p-5">
             <div class="columns">
                 <div class="column is-half mt-3">
-                    <img :src="getImageVehicles" alt="image film">
+                    <img :src="getImageVehicles"
+                        alt="image film">
                 </div>
                 <div class="column has-text-left is-half mt-3">
                     <div class="box">
@@ -32,7 +33,7 @@ import { mapGetters } from 'vuex'
 export default {
     name: 'infoVehicles',
     computed: {
-        ...mapGetters(['getInfoVehicles', 'getImageVehicles'])
+        ...mapGetters(['getInfoVehicles','getImageVehicles'])
     },
     mounted() {
         document.getElementById("op6").style.borderBottom = 'solid rgb(191, 147, 0) 3px';
@@ -49,14 +50,12 @@ export default {
 </script>
 
 <style>
-.box {
+.box{
     background-color: rgb(45, 45, 45);
 }
-
 .caixa {
     background-color: black;
 }
-
 strong {
     color: rgb(174, 171, 171);
 }
@@ -64,4 +63,5 @@ strong {
 p {
     color: rgb(133, 131, 131);
 }
+
 </style>

@@ -1,4 +1,5 @@
 <template>
+
     <div class="caixa">
         <div class="container p-5">
             <div class="columns">
@@ -21,8 +22,10 @@
                         <p><strong>Languaje: </strong> {{ getInfoSpecies.language }}</p>
                     </div>
                     <button @click="retroceder" class="button is-dark">Go back</button>
+                   
                 </div>
             </div>
+
         </div>
     </div>
 </template>
@@ -48,10 +51,9 @@ export default {
 }
 </script>
 <style>
-.caixa {
+.caixa{
     background-color: black;
 }
-
 strong {
     color: rgb(174, 171, 171);
 }

@@ -7,13 +7,12 @@
                         <div class="card-image">
                             <figure class="image">
                                 <img :src="(`https://starwars-visualguide.com/assets/img/vehicles/${item.url.split(/\D/g).join('')}.jpg`)"
-                                    @error="setErrorImg" alt="image film">
+                                    @error ="setErrorImg" alt="image film">
                             </figure>
                             <a class="nav-link">
-                                <p style="color:gray" @click="getInfoVehicles(item), showImageVehicle(item)"
-                                    class="title is-size-5">{{
-                                        item.name
-                                    }} </p>
+                                <p style="color:gray" @click="getInfoVehicles(item),  showImageVehicle(item)" class="title is-size-5">{{
+                                    item.name
+                                }} </p>
 
                             </a>
                         </div>

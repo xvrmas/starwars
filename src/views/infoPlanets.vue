@@ -3,8 +3,7 @@
         <div class="container p-5">
             <div class="columns">
                 <div class="column is-half mt-3">
-                    <img :src="require(`@/assets/planets/${getInfoPlanets.url.split(/\D/g).join('')}.jpg`)"
-                        alt="image film">
+                    <img :src="require(`@/assets/planets/${getInfoPlanets.url.split(/\D/g).join('')}.jpg`)" alt="image film">
                 </div>
                 <div class="column has-text-left is-half mt-3">
                     <div class="box">
@@ -19,18 +18,20 @@
                         <p><strong>Surface water: </strong> {{ getInfoPlanets.surface_water }}</p>
                     </div>
                     <button @click="retroceder" class="button is-dark">Go back</button>
+                             
                 </div>
             </div>
-            <relatedFilms></relatedFilms>
+
         </div>
     </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-
+import relatedFilms from '@/components/relatedFilms.vue';
 export default {
     name: 'infoPlanets',
+    components:{relatedFilms},
     computed: {
         ...mapGetters(['getInfoPlanets']),
 
@@ -52,7 +53,6 @@ export default {
 .caixa {
     background-color: black;
 }
-
 strong {
     color: rgb(174, 171, 171);
 }

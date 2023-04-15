@@ -39,7 +39,6 @@ export default {
 
     methods: {
         setInfo(item) {
-            this.$store.state.infoCharacters = item
             this.$router.push('/infoCharacters')
             this.$store.dispatch('GET_INFOCHARACTERS', item)
         },
