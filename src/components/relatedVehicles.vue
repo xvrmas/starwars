@@ -5,7 +5,7 @@
         <div class="columns is-multiline is-mobile is-centered ">
             <div v-for="(item, i) in vehicles" :key="i">
                 <div class="carta">
-                    <a >
+                    <a class="nav-link" @click="setInfovehicles(item),setInfoPilots(item),showImageVehicle(item)">
                         <figure class="image">
                             <img class="imatge"
                                 :src="(`https://starwars-visualguide.com/assets/img/vehicles/${item.url.split(/\D/g).join('')}.jpg`)"

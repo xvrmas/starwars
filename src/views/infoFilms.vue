@@ -14,7 +14,7 @@
                         <p><strong>Director: </strong> {{ infoFilm.director }}</p>
                         <p><strong>Producer(s): </strong>{{ infoFilm.producer }}</p>
                         <p><strong>Release date: </strong>{{ orderDate }}</p>
-                        <p><strong>Synopsis: </strong>{{ infoFilm.opening_crawl }}</p><br>
+                        <p><strong>Synopsis: </strong>{{ infoFilm.opening_crawl }}</p>
                         <relatedCharacters></relatedCharacters>
                         <relatedSpecies></relatedSpecies>
                         <relatedPlanets></relatedPlanets>
