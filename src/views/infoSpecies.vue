@@ -22,6 +22,7 @@
                     </div>
                     <div class="column">
                         <relatedFilms></relatedFilms>
+                        <realtedPeopleVue></realtedPeopleVue>
                     </div>
                 </div>
             </div>
@@ -32,9 +33,10 @@
 <script>
 import { mapGetters } from 'vuex'
 import relatedFilms from '@/components/relatedFilms.vue'
+import realtedPeopleVue from '@/components/realtedPeople.vue'
 export default {
     name: 'infoSpecies',
-    components: { relatedFilms },
+    components: { relatedFilms,realtedPeopleVue },
     computed: {
         ...mapGetters(['getInfoSpecies'])
     },

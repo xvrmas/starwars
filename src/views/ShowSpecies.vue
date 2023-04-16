@@ -9,7 +9,7 @@
                                 <img :src="(`https://starwars-visualguide.com/assets/img/species/${item.url.split(/\D/g).join('')}.jpg`)"
                                     alt="image film">
                             </figure>
-                            <a class="nav-link" @click="setInfoSpecies(item), getFilms(item)">
+                            <a class="nav-link" @click="setInfoSpecies(item), getFilms(item), setInfoPeople(item)">
                                 <p style="color:gray" class="title is-size-5">{{
                                     item.name
                                 }}</p>
@@ -49,6 +49,9 @@ export default {
         getFilms(item) {
             this.$store.state.infoFilm = item
             console.log('show vehicles', item)
+        },
+        setInfoPeople(item) {
+            this.$store.state.infoCharacters = item
         },
         increasePage() {
             this.$store.state.pageSpecies++;
