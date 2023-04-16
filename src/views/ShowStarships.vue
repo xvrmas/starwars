@@ -34,7 +34,7 @@
 import { mapGetters, mapMutations, mapState } from 'vuex'
 import notImg from '@/assets/errorImg/notImg.jpg'
 export default {
-    name: 'HomeView',
+    name: 'ShowStarships',
     mounted() {
 
         document.getElementById("op5").style.borderBottom = 'solid rgb(191, 147, 0) 3px';

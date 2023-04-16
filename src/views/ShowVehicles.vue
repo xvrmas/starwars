@@ -35,7 +35,6 @@ import { mapGetters } from 'vuex'
 import notImg from '@/assets/errorImg/notImg.jpg'
 export default {
     name: 'showVehicles',
-
     computed: {
         ...mapGetters(['getVehicles'])
     },

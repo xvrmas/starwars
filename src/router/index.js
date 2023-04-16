@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import ShowFilms from '../views/ShowFilms.vue'
 
 Vue.use(VueRouter)
 
@@ -8,17 +8,12 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: HomeView
+    component: ShowFilms
   },
   {
-    path: '/infoStarShip',
-    name: 'infoStarShip',
-    component: () => import('../views/InfoStarShip.vue')
-  },
-  {
-    path: '/ShowFilms',
-    name: 'ShowFilms',
-    component: () => import('../views/ShowFilms.vue')
+    path: '/ShowStarships',
+    name: 'ShowStarships',
+    component: () => import('../views/ShowStarships.vue')
   },
   {
     path: '/ShowPeople',
@@ -61,10 +56,14 @@ const routes = [
     component: () => import('../views/infoSpecies.vue')
   },
   {
+    path: '/InfoStarShip',
+    name: 'InfoStarShip',
+    component: () => import('../views/InfoStarShip.vue')
+  },
+  {
     path: '/infoVehicles',
     name: 'infoVehicles',
     component: () => import('../views/infoVehicles.vue')
-
   }
 
 

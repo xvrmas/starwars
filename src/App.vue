@@ -13,7 +13,7 @@ export default {
   components: { NavBar, Footer },
   mounted() {
     this.$store.dispatch('GET_FILMS')
-    this.$router.push('showFilms')
+    this.$router.push('/')
   }
 }
 </script>

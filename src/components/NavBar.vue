@@ -31,21 +31,17 @@ export default {
     },
 
     methods: {
-        home() {
-            this.$router.push('/showFilms')
+        showFilms() {
+            this.$router.push('/')
+            this.$store.dispatch("GET_FILMS")
         },
         starships() {
+            this.$router.push('/ShowStarships')
             this.$store.dispatch("GET_STARSHIPS")
-            this.$router.push('/')
         },
         showImageShip() {
             this.$store.dispatch("GET_IMAGESHIPS")
-        },
-        showFilms() {
-            this.$router.push('/showFilms')
-            this.$store.dispatch("GET_FILMS")
-
-        },
+        },    
         showPeople() {
             this.$router.push('/showPeople')
             this.$store.dispatch('GET_PEOPLE')
