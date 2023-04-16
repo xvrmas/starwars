@@ -11,7 +11,7 @@
                                 alt="image film">
                         </figure>
                     </div>
-                    <a class="nav-link" @click="setInfoStarships(item), showImageShip(item)">
+                    <a class="nav-link" @click="setInfoStarships(item), showImageShip(item),setInfoPilots(item)">
                         <p class="title has-text-grey is-size-6">related {{ item.name }}</p>
                     </a>
                 </div>
@@ -44,6 +44,9 @@ export default {
             this.$store.state.infoStarships = item
             this.$router.push('/infoStarShip')
             this.$store.dispatch('GET_INFOSTARSHIPS', item)
+        },
+        setInfoPilots(item) {
+            this.$store.state.infoCharacters = item
         },
         showImageShip(item) {
             this.$store.state.numImg = item.split(/\D/g).join('')

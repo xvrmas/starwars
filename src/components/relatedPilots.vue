@@ -1,6 +1,7 @@
 <template>
     <div class="box">
-        <p class="titol is-size-4  is-bold">Related Characters</p>
+        <p class="titol is-size-5  is-bold">Related Pilots</p>
+        <p class="is-size-3 m-5 has-text-gray-lighter"> {{ msg }}</p>
         <div class="columns is-multiline is-mobile is-centered ">
             <div v-for="(item, i) in personatges" :key="i">
                 <div class="carta">
@@ -10,24 +11,26 @@
                                 :src="require(`@/assets/characters/${item.url.split(/\D/g).join('')}.jpg`)"
                                 alt="image film">
                         </figure>
-                        <a class="nav-link" @click="setInfo(item),setInfoShip(item),getInfoVehicles(item) ">
-                            <p class="title has-text-grey-lighter is-size-6"> {{ item.name }}</p>
+                        <a class="nav-link" @click="setInfo(item)">
+                           <p class="title has-text-grey-lighter is-size-6"> {{ item.name }}</p>
+
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</template>1
+</template>
 
 <script>
 import { mapGetters } from 'vuex'
 export default {
-    name: 'relatedCharacters',
+    name: 'relatedPilots',
     data() {
         return {
             personatges: [],
-            numImatge: ''
+            numImatge: '',
+            msg:''
         }
     },
     computed: {
@@ -44,15 +47,12 @@ export default {
             this.$router.push('/infoCharacters')
             this.$store.dispatch('GET_INFOCHARACTERS', item)
         },
-        setInfoShip(item) {
-            this.$store.state.infoTechShip = item
-        },
-        getInfoVehicles(item) {
-            this.$store.state.infoVehicles = item
-        },
         async getcharacters() {
-            for (let i = 0; i < this.getInfoFilms.characters.length; i++) {
-                const response = fetch(this.getInfoFilms.characters[i])
+            if(this.getInfoFilms.pilots.length == 0){
+                this.msg='Pilot not available'
+            }
+            for (let i = 0; i < this.getInfoFilms.pilots.length; i++) {
+                const response = fetch(this.getInfoFilms.pilots[i])
                 const infoCharaters = await (await response).json();
                 this.personatges.push(infoCharaters)
             }

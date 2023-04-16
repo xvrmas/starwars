@@ -48,6 +48,9 @@ export default {
             this.$store.dispatch('GET_INFOVEHICLES', item)
 
         },
+        setInfoPilots(item) {
+            this.$store.state.infoCharacters = item
+        },
         showImageVehicle: function (item) {
             this.$store.state.numImg = item.url.split(/\D/g).join('')
             this.$store.dispatch("GET_IMAGEVEHICLES", item)

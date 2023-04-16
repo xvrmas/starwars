@@ -27,6 +27,7 @@
                     </div>
                     <div class="column">
                         <relatedFilms></relatedFilms>
+                        <relatedPilotsVue></relatedPilotsVue>
                     </div>
                 </div>
             </div>
@@ -37,9 +38,10 @@
 <script>
 import { mapGetters } from 'vuex'
 import relatedFilms from '@/components/relatedFilms.vue'
+import relatedPilotsVue from '@/components/relatedPilots.vue'
 export default {
     name: 'InfoStarShip',
-    components: { relatedFilms },
+    components: { relatedFilms, relatedPilotsVue },
     computed: {
         ...mapGetters(['getImageShips', 'getInfoShips'])
     },

@@ -30,6 +30,8 @@
                         }} Kgr.</p>
                     </div>
                     <relatedFilms></relatedFilms>
+                    <relatedStarships></relatedStarships>
+                    <relatedvehicles></relatedvehicles>
                 </div>
             </div>
         </div>

@@ -10,7 +10,7 @@
                                     <img :src="(`https://starwars-visualguide.com/assets/img/starships/${item.url.split(/\D/g).join('')}.jpg`)"
                                         @error="setErrorImg" alt="image film">
                                 </figure>
-                                <a class="nav-link" @click="setInfoShip(item), showImageShip(item), getFilms(item)">
+                                <a class="nav-link" @click="setInfoShip(item), showImageShip(item), getFilms(item),  setInfoPilots(item)">
                                     <p style="color:gray" class="title is-size-5">{{ item.name }}
                                     </p>
                                 </a>
@@ -50,6 +50,9 @@ export default {
         setInfoShip(item) {
             this.$store.state.infoTechShip = item
             this.$router.push('/infoStarShip')
+        },
+        setInfoPilots(item) {
+            this.$store.state.infoCharacters = item
         },
         increasePage() {
             this.$store.state.pageStarships++;

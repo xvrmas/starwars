@@ -10,7 +10,7 @@
                                     @error="setErrorImg" alt="image film">
                             </figure>
                             <a class="nav-link">
-                                <p style="color:gray" @click="getInfoVehicles(item), showImageVehicle(item), getFilms(item)"
+                                <p style="color:gray" @click="getInfoVehicles(item), showImageVehicle(item), getFilms(item),setInfoPilots(item)"
                                     class="title is-size-5">{{
                                         item.name
                                     }} </p>
@@ -59,6 +59,9 @@ export default {
         getFilms(item) {
             this.$store.state.infoFilm = item
             console.log('show vehicles', item)
+        },
+        setInfoPilots(item) {
+            this.$store.state.infoCharacters = item
         },
         increasePage() {
             this.$store.state.pageVehicles++;
