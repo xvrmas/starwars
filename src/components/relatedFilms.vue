@@ -1,6 +1,7 @@
 <template>
     <div class="box">
         <p class="titol is-size-4  is-bold">Related Films</p>
+        <p class="is-size-4 m-5 has-text-gray-lighter"> {{ msg }}</p>
         <div class="columns is-multiline is-mobile is-centered ">
             <div v-for="(item, i) in films " :key="i">
                 <div class="carta">
@@ -28,11 +29,12 @@ export default {
     },
     data() {
         return {
-            films: []
+            films: [],
+            msg: ''
         }
     },
 
-   mounted() {
+    mounted() {
         this.getFilms()
     },
 
@@ -54,9 +56,9 @@ export default {
                     const response = fetch(this.getInfoFilms.films[i])
                     const filming = await (await response).json();
                     this.films.push(filming)
-
                 }
             } else {
+                this.msg = 'Films not available'
                 this.$store.state.condition = false
             }
         },
