@@ -58,20 +58,19 @@ export default {
             this.$store.dispatch("GET_IMAGEVEHICLES", item)
         },
         async getVehicles() {
-            if (this.getInfoFilms.starships.length == 0) {
-                this.msg = 'Vehicle not available'
-            } else {
+            if (this.getInfoFilms.vehicles.length >= 1) {
                 for (let i = 0; i < this.getInfoFilms.vehicles.length; i++) {
                     const response = fetch(this.getInfoFilms.vehicles[i])
                     const infoVehicles = await (await response).json();
                     this.vehicles.push(infoVehicles)
                 }
+            }else {
+                this.msg = 'Vehicle not available'
             }
-
         }
     }
+}
 
-} 
 </script>
 
 <style scoped>

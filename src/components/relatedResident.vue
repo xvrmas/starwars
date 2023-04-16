@@ -47,15 +47,15 @@ export default {
             this.$store.dispatch('GET_INFOCHARACTERS', item)
         },
         async getcharacters() {
-            if (this.getInfoFilms.residents.length == 0) {
-                this.msg = 'Residents not available'
-            } else {
+            if (this.getInfoFilms.residents.length >= 1) {
                 for (let i = 0; i < this.getInfoFilms.residents.length; i++) {
                     const response = fetch(this.getInfoFilms.residents[i])
                     const infoCharaters = await (await response).json();
-                    console.log('related resi',infoCharaters)
+                    console.log('related resi', infoCharaters)
                     this.personatges.push(infoCharaters)
                 }
+            } else {
+                this.msg = 'Residents not available'
             }
         },
     }

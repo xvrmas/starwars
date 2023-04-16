@@ -55,15 +55,15 @@ export default {
             return this.$store.dispatch("GET_IMAGESHIPS", item)
         },
         async getStarships() {
-            if (this.getInfoFilms.starships.length == 0) {
-                this.msg = 'StarShip not available'
-
-            } else {
+            if (this.getInfoFilms.starships.length >= 1) {
                 for (let i = 0; i < this.getInfoFilms.starships.length; i++) {
                     const response = fetch(this.getInfoFilms.starships[i])
                     const infoStarShip = await (await response).json();
                     this.starships.push(infoStarShip)
                 }
+            }else{
+                this.msg = 'StarShip not available'
+
             }
         },
         showImageShip: function (item) {
