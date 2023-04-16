@@ -17,9 +17,7 @@
                         <p><strong>Passengers: </strong> {{ getInfoVehicles.passengers }}</p>
                         <p><strong>Max atmosphering speed: </strong> {{ getInfoVehicles.max_atmosphering_speed }}</p>
                         <p><strong>Cargo capacity: </strong> {{ getInfoVehicles.cargo_capacity }}</p>
-                        <p><strong>Consumables: </strong> {{ getInfoVehicles.consumables }}</p>
-                    </div>
-                    <div class="column">
+                        <p><strong>Consumables: </strong> {{ getInfoVehicles.consumables }}</p><br>
                         <relatedFilms></relatedFilms>
                         <relatedPilots></relatedPilots>
                     </div>
@@ -35,7 +33,7 @@ import relatedFilms from '@/components/relatedFilms.vue'
 import relatedPilots from '@/components/relatedPilots.vue'
 export default {
     name: 'infoVehicles',
-    components: { relatedFilms,relatedPilots },
+    components: { relatedFilms, relatedPilots },
     computed: {
         ...mapGetters(['getInfoVehicles', 'getImageVehicles'])
     },
@@ -55,7 +53,9 @@ export default {
 
 <style>
 .box {
+    margin-top: 5px;
     background-color: rgb(45, 45, 45);
+    box-shadow:1px 1px 3px 3px rgb(36, 36, 36);
 }
 
 .caixa {

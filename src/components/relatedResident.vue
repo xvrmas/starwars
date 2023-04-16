@@ -5,7 +5,7 @@
         <div class="columns is-multiline is-mobile is-centered ">
             <div v-for="(item, i) in personatges" :key="i">
                 <div class="carta">
-                    <a class="nav-link" @click="setInfo(item)">
+                    <a >
                         <figure class="image">
                             <img class="imatge" :src="require(`@/assets/characters/${item.url.split(/\D/g).join('')}.jpg`)"
                                 alt="image film">
@@ -62,13 +62,7 @@ export default {
 }
 </script>
 <style>
-.box {
-    padding: 20px;
-    background-color: rgb(45, 45, 45);
-    margin: 1px;
-    border-radius: 10px;
-    text-align: center;
-}
+
 
 img {
     border-radius: 10px;

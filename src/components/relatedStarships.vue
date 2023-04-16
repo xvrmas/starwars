@@ -14,7 +14,7 @@
                             </figure>
                         </div>
                         <div>
-                            <p class="title has-text-grey is-size-6">related {{ item.name }}</p>
+                            <p class="title has-text-grey is-size-6">{{ item.name }}</p>
                         </div>
                     </a>
                 </div>

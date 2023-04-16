@@ -28,14 +28,14 @@
                         <p><strong>Mass: </strong>{{
                             getInfoCharacters.mass
                         }} Kgr.</p>
-                        <p><strong>Home world: </strong><a @click="setInfoPlanets(),setInfoResidents(), getFilms() ">{{
+                        <p><strong>Home world: </strong><a @click="setInfoPlanets(), setInfoResidents(), getFilms()">{{
                             msg
-                        }}</a></p>
+                        }}</a></p><br>
+                        <relatedFilms></relatedFilms>
+                        <relatedStarships></relatedStarships>
+                        <relatedvehicles></relatedvehicles>
+                        <relatedSpecies></relatedSpecies>
                     </div>
-                    <relatedFilms></relatedFilms>
-                    <relatedStarships></relatedStarships>
-                    <relatedvehicles></relatedvehicles>
-                    <relatedSpecies></relatedSpecies>
                 </div>
             </div>
         </div>
@@ -55,7 +55,7 @@ export default {
     data() {
         return {
             msg: '',
-            home:[]
+            home: []
         }
     },
 
@@ -85,7 +85,7 @@ export default {
         setInfoPlanets() {
             this.$store.state.infoPlanets = this.home
             this.$router.push('/infoPlanets')
-        },   
+        },
         setInfoResidents() {
             this.$store.state.infoCharacters = this.home
         },
@@ -95,6 +95,11 @@ export default {
 </script>
 
 <style scoped>
+.box {
+    margin-top: 5px;
+    background-color: rgb(45, 45, 45);
+    box-shadow:1px 1px 3px 3px rgb(36, 36, 36);
+}
 .caixa {
     background-color: black;
     height: max-content;
@@ -107,11 +112,13 @@ strong {
 p {
     color: rgb(133, 131, 131);
 }
-a{
-    color:rgb(133, 131, 131);
+
+a {
+    color: rgb(133, 131, 131);
     text-decoration: underline;
 }
-a:hover{
-    color:white;
+
+a:hover {
+    color: white;
 }
 </style>

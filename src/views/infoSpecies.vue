@@ -18,9 +18,7 @@
                         <p><strong>Hair color: </strong> {{ getInfoSpecies.hair_colors }}</p>
                         <p><strong>Skin color: </strong> {{ getInfoSpecies.skin_colors }}</p>
                         <p><strong>Eye color: </strong> {{ getInfoSpecies.eye_colors }}</p>
-                        <p><strong>Languaje: </strong> {{ getInfoSpecies.language }}</p>
-                    </div>
-                    <div class="column">
+                        <p><strong>Languaje: </strong> {{ getInfoSpecies.language }}</p><br>
                         <relatedFilms></relatedFilms>
                         <realtedPeopleVue></realtedPeopleVue>
                     </div>
@@ -36,7 +34,7 @@ import relatedFilms from '@/components/relatedFilms.vue'
 import realtedPeopleVue from '@/components/realtedPeople.vue'
 export default {
     name: 'infoSpecies',
-    components: { relatedFilms,realtedPeopleVue },
+    components: { relatedFilms, realtedPeopleVue },
     computed: {
         ...mapGetters(['getInfoSpecies'])
     },
@@ -54,6 +52,11 @@ export default {
 }
 </script>
 <style>
+.box {
+    margin-top: 5px;
+    background-color: rgb(45, 45, 45);
+    box-shadow:1px 1px 3px 3px rgb(36, 36, 36);
+}
 .caixa {
     background-color: black;
 }

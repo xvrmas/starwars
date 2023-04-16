@@ -2,7 +2,7 @@
     <div class="caixa">
         <div class="container p-5">
             <div class="columns">
-                <div class="caixaImatge">
+                <div class="column is-half mt-3">
                     <img :src="getImageShips">
                 </div>
                 <div class="column has-text-left is-half mt-3">
@@ -19,15 +19,10 @@
                             <p><strong>Consumables:</strong> {{ getInfoShips.consumables }}</p>
                             <p><strong>Hyperdrive rating:</strong> {{ getInfoShips.hyperdrive_rating }}</p>
                             <p><strong>Starship class: </strong> {{ getInfoShips.starship_class }}</p>
-                            <p><strong>MGLT:</strong> {{ getInfoShips.MGLT }}</p>
-                        </div>
-                        <!-- <div class="column">
+                            <p><strong>MGLT:</strong> {{ getInfoShips.MGLT }}</p><br>
                             <relatedFilms></relatedFilms>
-                        </div> -->
-                    </div>
-                    <div class="column">
-                        <relatedFilms></relatedFilms>
-                        <relatedPilotsVue></relatedPilotsVue>
+                            <relatedPilotsVue></relatedPilotsVue>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -67,7 +62,9 @@ img {
 }
 
 .box {
+    margin-top: 5px;
     background-color: rgb(45, 45, 45);
+    box-shadow:1px 1px 3px 3px rgb(36, 36, 36);
 }
 
 .caixa {
@@ -81,5 +78,4 @@ strong {
 p {
     color: rgb(133, 131, 131);
 }
-
 </style>

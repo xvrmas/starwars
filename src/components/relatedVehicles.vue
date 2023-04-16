@@ -5,7 +5,7 @@
         <div class="columns is-multiline is-mobile is-centered ">
             <div v-for="(item, i) in vehicles" :key="i">
                 <div class="carta">
-                    <a class="nav-link" @click="setInfovehicles(item), showImageVehicle(item)">
+                    <a >
                         <figure class="image">
                             <img class="imatge"
                                 :src="(`https://starwars-visualguide.com/assets/img/vehicles/${item.url.split(/\D/g).join('')}.jpg`)"
@@ -80,6 +80,5 @@ export default {
     height: auto;
     margin: 8px;
     border-radius: 5%;
-
 }
 </style>

@@ -58,7 +58,6 @@ export default {
         },
         getFilms(item) {
             this.$store.state.infoFilm = item
-            console.log('show vehicles', item)
         },
         setInfoPilots(item) {
             this.$store.state.infoCharacters = item
@@ -99,4 +98,7 @@ export default {
 img {
     border-bottom: solid rgb(191, 147, 0) 3px;
 }
+/* .image{
+    background-attachment: inherit;
+} */
 </style>

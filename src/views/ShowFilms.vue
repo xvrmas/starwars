@@ -106,7 +106,6 @@ export default {
     height: 67vh;
     background-color: rgb(30, 30, 30);
     margin: 20px;
-
 }
 
 .title {

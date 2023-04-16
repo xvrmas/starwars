@@ -16,10 +16,10 @@
                         <p><strong>Population: </strong> {{ getInfoPlanets.population }}</p>
                         <p><strong>Climate: </strong> {{ getInfoPlanets.climate }}</p>
                         <p><strong>Terrain: </strong> {{ getInfoPlanets.terrain }}</p>
-                        <p><strong>Surface water: </strong> {{ getInfoPlanets.surface_water }}</p>
+                        <p><strong>Surface water: </strong> {{ getInfoPlanets.surface_water }}</p><br>
+                        <relatedFilms></relatedFilms>
+                        <relatedResidentVue></relatedResidentVue>
                     </div>
-                    <relatedFilms></relatedFilms>
-                    <relatedResidentVue></relatedResidentVue>
                 </div>
             </div>
 
@@ -33,7 +33,7 @@ import relatedFilms from '@/components/relatedFilms.vue';
 import relatedResidentVue from '@/components/relatedResident.vue'
 export default {
     name: 'infoPlanets',
-    components: { relatedFilms,relatedResidentVue},
+    components: { relatedFilms, relatedResidentVue },
     computed: {
         ...mapGetters(['getInfoPlanets']),
 
@@ -52,6 +52,11 @@ export default {
 }
 </script>
 <style>
+.box {
+    margin-top: 5px;
+    background-color: rgb(45, 45, 45);
+    box-shadow:1px 1px 3px 3px rgb(36, 36, 36);
+}
 .caixa {
     background-color: black;
 }

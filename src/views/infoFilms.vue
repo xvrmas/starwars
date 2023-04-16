@@ -14,17 +14,13 @@
                         <p><strong>Director: </strong> {{ infoFilm.director }}</p>
                         <p><strong>Producer(s): </strong>{{ infoFilm.producer }}</p>
                         <p><strong>Release date: </strong>{{ orderDate }}</p>
-                        <p><strong>Synopsis: </strong>{{ infoFilm.opening_crawl }}</p>
-                    </div>
-                    <div class="column">
+                        <p><strong>Synopsis: </strong>{{ infoFilm.opening_crawl }}</p><br>
                         <relatedCharacters></relatedCharacters>
                         <relatedSpecies></relatedSpecies>
                         <relatedPlanets></relatedPlanets>
-                    </div>
-                    <div class="column">
                         <relatedStarships></relatedStarships>
                         <relatedvehicles></relatedvehicles>
-                    </div>
+                    </div>     
                 </div>
             </div>
         </div>
@@ -58,6 +54,11 @@ export default {
 }
 </script>
 <style scoped>
+.box {
+    margin-top: 5px;
+    background-color: rgb(45, 45, 45);
+    box-shadow:1px 1px 3px 3px rgb(36, 36, 36);
+}
 p {
     color: rgb(133, 131, 131);
 }
