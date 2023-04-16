@@ -5,15 +5,15 @@
         <div class="columns is-multiline is-mobile is-centered ">
             <div v-for="(item, i) in films " :key="i">
                 <div class="carta">
-                    <div>
+                    <a class="nav-link" @click="setInfo(item), showImageFilm(item)">
                         <figure class="image">
                             <img class="imatge" :src="require(`@/assets/portada/${item.url.split(/\D/g).join('')}.jpg`)"
                                 alt="image film">
                         </figure>
-                        <a class="nav-link" @click="setInfo(item), showImageFilm(item)">
+                        <div>
                             <p class="title has-text-grey is-size-6"> {{ item.title }}</p>
-                        </a>
-                    </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>

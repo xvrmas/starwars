@@ -5,15 +5,17 @@
         <div class="columns is-multiline is-mobile is-centered ">
             <div v-for="(item, i) in starships" :key="i">
                 <div class="carta">
-                    <div>
-                        <figure class="image">
-                            <img class="imatge" @error="setErrorImg"
-                                :src="`https://starwars-visualguide.com/assets/img/starships/${item.url.split(/\D/g).join('')}.jpg`"
-                                alt="image film">
-                        </figure>
-                    </div>
                     <a class="nav-link" @click="setInfoStarships(item), showImageShip(item), setInfoPilots(item)">
-                        <p class="title has-text-grey is-size-6">related {{ item.name }}</p>
+                        <div>
+                            <figure class="image">
+                                <img class="imatge" @error="setErrorImg"
+                                    :src="`https://starwars-visualguide.com/assets/img/starships/${item.url.split(/\D/g).join('')}.jpg`"
+                                    alt="image film">
+                            </figure>
+                        </div>
+                        <div>
+                            <p class="title has-text-grey is-size-6">related {{ item.name }}</p>
+                        </div>
                     </a>
                 </div>
             </div>
@@ -61,7 +63,7 @@ export default {
                     const infoStarShip = await (await response).json();
                     this.starships.push(infoStarShip)
                 }
-            }else{
+            } else {
                 this.msg = 'StarShip not available'
 
             }

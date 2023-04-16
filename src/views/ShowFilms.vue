@@ -4,16 +4,19 @@
             <div class="columns is-multiline is-centered is-mobile">
                 <div v-for="(item, i) in orderFilms" :key="i">
                     <div class="card">
-                        <div class="card-image">
-                            <figure class="image">
-                                <img :src="require(`@/assets/portada/${item.url.split(/\D/g).join('')}.jpg`)"
-                                    alt="image film">
-                            </figure>
-                            <a class="nav-link" @click="setInfoFilm(item), showImageFilm(item)">
-                                <p style="color:gray" v-on="num" class="title is-size-6">Episode {{ item.episode_id }}</p>
-                                <p style="color:gray" class="title has-text-weight-bold is-size-5">{{ item.title }}</p>
-                            </a>
-                        </div>
+                        <a class="nav-link" @click="setInfoFilm(item), showImageFilm(item)">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img :src="require(`@/assets/portada/${item.url.split(/\D/g).join('')}.jpg`)"
+                                        alt="image film">
+                                </figure>
+                                <div >
+                                    <p style="color:gray" v-on="num" class="title is-size-6">Episode {{ item.episode_id }}
+                                    </p>
+                                    <p style="color:gray" class="title has-text-weight-bold is-size-5">{{ item.title }}</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>

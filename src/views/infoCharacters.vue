@@ -35,6 +35,7 @@
                     <relatedFilms></relatedFilms>
                     <relatedStarships></relatedStarships>
                     <relatedvehicles></relatedvehicles>
+                    <relatedSpecies></relatedSpecies>
                 </div>
             </div>
         </div>
@@ -59,7 +60,7 @@ export default {
     },
 
     computed: {
-        ...mapGetters(['getInfoCharacters', 'getInfoPlanets']),
+        ...mapGetters(['getInfoCharacters']),
         async homeworld() {
             const response = fetch(this.getInfoCharacters.homeworld)
             this.home = await (await response).json();

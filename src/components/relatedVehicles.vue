@@ -5,16 +5,16 @@
         <div class="columns is-multiline is-mobile is-centered ">
             <div v-for="(item, i) in vehicles" :key="i">
                 <div class="carta">
-                    <div>
+                    <a class="nav-link" @click="setInfovehicles(item), showImageVehicle(item)">
                         <figure class="image">
                             <img class="imatge"
                                 :src="(`https://starwars-visualguide.com/assets/img/vehicles/${item.url.split(/\D/g).join('')}.jpg`)"
                                 @error="setErrorImg" alt="image film">
                         </figure>
-                        <a class="nav-link" @click="setInfovehicles(item), showImageVehicle(item)">
+                        <div >
                             <p class="title has-text-grey is-size-6"> {{ item.name }}</p>
-                        </a>
-                    </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>

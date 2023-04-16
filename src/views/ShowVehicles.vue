@@ -5,16 +5,17 @@
                 <div v-for="(item, i) in getVehicles.results" :key="i">
                     <div class="card">
                         <div class="card-image">
-                            <figure class="image">
-                                <img :src="(`https://starwars-visualguide.com/assets/img/vehicles/${item.url.split(/\D/g).join('')}.jpg`)"
-                                    @error="setErrorImg" alt="image film">
-                            </figure>
-                            <a class="nav-link">
-                                <p style="color:gray" @click="getInfoVehicles(item), showImageVehicle(item), getFilms(item),setInfoPilots(item)"
-                                    class="title is-size-5">{{
+                            <a class="nav-link"
+                                @click="getInfoVehicles(item), showImageVehicle(item), getFilms(item), setInfoPilots(item)">
+                                <figure class="image">
+                                    <img :src="(`https://starwars-visualguide.com/assets/img/vehicles/${item.url.split(/\D/g).join('')}.jpg`)"
+                                        @error="setErrorImg" alt="image film">
+                                </figure>
+                                <div>
+                                    <p style="color:gray" class="title is-size-5">{{
                                         item.name
                                     }} </p>
-
+                                </div>
                             </a>
                         </div>
                     </div>
@@ -77,7 +78,7 @@ export default {
             }
             this.$store.dispatch("GET_VEHICLES")
         },
-      
+
 
     }
 

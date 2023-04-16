@@ -4,17 +4,19 @@
             <div class="columns is-multiline is-centered is-mobile">
                 <div v-for="(item, i) in getSpecies.results" :key="i">
                     <div class="card">
-                        <div class="card-image">
-                            <figure class="image">
-                                <img :src="(`https://starwars-visualguide.com/assets/img/species/${item.url.split(/\D/g).join('')}.jpg`)"
-                                    alt="image film">
-                            </figure>
-                            <a class="nav-link" @click="setInfoSpecies(item), getFilms(item), setInfoPeople(item)">
-                                <p style="color:gray" class="title is-size-5">{{
-                                    item.name
-                                }}</p>
-                            </a>
-                        </div>
+                        <a class="nav-link" @click="setInfoSpecies(item), getFilms(item), setInfoPeople(item)">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img :src="(`https://starwars-visualguide.com/assets/img/species/${item.url.split(/\D/g).join('')}.jpg`)"
+                                        alt="image film">
+                                </figure>
+                                <div>
+                                    <p style="color:gray" class="title is-size-5">{{
+                                        item.name
+                                    }}</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>

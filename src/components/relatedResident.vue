@@ -5,16 +5,16 @@
         <div class="columns is-multiline is-mobile is-centered ">
             <div v-for="(item, i) in personatges" :key="i">
                 <div class="carta">
-                    <div>
+                    <a class="nav-link" @click="setInfo(item)">
                         <figure class="image">
                             <img class="imatge" :src="require(`@/assets/characters/${item.url.split(/\D/g).join('')}.jpg`)"
                                 alt="image film">
                         </figure>
-                        <a class="nav-link" @click="setInfo(item)">
+                        <div >
                             <p class="title has-text-grey-lighter is-size-6"> {{ item.name }}</p>
 
-                        </a>
-                    </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>

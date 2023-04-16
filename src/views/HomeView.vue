@@ -5,16 +5,19 @@
                 <div class="columns is-multiline is-centered is-mobile">
                     <div v-for="(item, i) in getStarShips.results" :key="i">
                         <div class="card">
-                            <div class="card-image">
-                                <figure class="image">
-                                    <img :src="(`https://starwars-visualguide.com/assets/img/starships/${item.url.split(/\D/g).join('')}.jpg`)"
-                                        @error="setErrorImg" alt="image film">
-                                </figure>
-                                <a class="nav-link" @click="setInfoShip(item), showImageShip(item), getFilms(item),  setInfoPilots(item)">
-                                    <p style="color:gray" class="title is-size-5">{{ item.name }}
-                                    </p>
-                                </a>
-                            </div>
+                            <a class="nav-link"
+                                @click="setInfoShip(item), showImageShip(item), getFilms(item), setInfoPilots(item)">
+                                <div class="card-image">
+                                    <figure class="image">
+                                        <img :src="(`https://starwars-visualguide.com/assets/img/starships/${item.url.split(/\D/g).join('')}.jpg`)"
+                                            @error="setErrorImg" alt="image film">
+                                    </figure>
+                                    <div>
+                                        <p style="color:gray" class="title is-size-5">{{ item.name }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -104,6 +107,5 @@ export default {
 
 img {
     border-bottom: solid rgb(191, 147, 0) 3px;
-
 }
 </style>

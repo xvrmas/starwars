@@ -4,17 +4,20 @@
             <div class="columns is-multiline is-centered is-mobile">
                 <div v-for="(item, i) in getPeople.results" :key="i">
                     <div class="card">
-                        <div class="card-image">
-                            <figure class="image">
-                                <img :src="require(`@/assets/characters/${item.url.split(/\D/g).join('')}.jpg`)"
-                                    alt="image film">
-                            </figure>
-                            <a class="nav-link" @click="setInfoFilms(item),getFilms(item),setInfoShip(item),getInfoVehicles(item) ">
-                                <p style="color:gray" class="title is-size-5">{{
-                                    item.name
-                                }}</p>
-                            </a>
-                        </div>
+                        <a class="nav-link"
+                            @click="setInfoFilms(item), getFilms(item), setInfoShip(item), getInfoVehicles(item), setInfoSpecies(item)">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img :src="require(`@/assets/characters/${item.url.split(/\D/g).join('')}.jpg`)"
+                                        alt="image film">
+                                </figure>
+                                <div>
+                                    <p style="color:gray" class="title is-size-5">{{
+                                        item.name
+                                    }}</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -60,6 +63,9 @@ export default {
                 this.$store.state.pagePeople = 9
             }
             this.$store.dispatch("GET_PEOPLE")
+        },
+        setInfoSpecies(item) {
+            this.$store.state.infoSpecies = item
         },
         decreasePage() {
             this.$store.state.pagePeople--;
