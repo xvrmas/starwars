@@ -219,7 +219,6 @@ export default new Vuex.Store({
     async GET_INFOPLANET({ commit }, item) {
       const response = fetch(item.url)
       const infoPlanets = await (await response).json();
-
       commit('setInfoPlanets', infoPlanets)
     },
     async GET_INFOSPECIES({ commit }, item) {

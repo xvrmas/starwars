@@ -28,6 +28,9 @@
                         <p><strong>Mass: </strong>{{
                             getInfoCharacters.mass
                         }} Kgr.</p>
+                        <p><strong>Home world: </strong><a @click="setInfoPlanets(),setInfoResidents(), getFilms() ">{{
+                            msg
+                        }}</a></p>
                     </div>
                     <relatedFilms></relatedFilms>
                     <relatedStarships></relatedStarships>
@@ -47,11 +50,25 @@ import relatedvehicles from '@/components/relatedVehicles.vue';
 export default {
     name: 'infoCharacters',
     components: { relatedPlanets, relatedSpecies, relatedStarships, relatedvehicles, relatedFilms },
+
+    data() {
+        return {
+            msg: '',
+            home:[]
+        }
+    },
+
     computed: {
-        ...mapGetters(['getInfoCharacters']),
+        ...mapGetters(['getInfoCharacters', 'getInfoPlanets']),
+        async homeworld() {
+            const response = fetch(this.getInfoCharacters.homeworld)
+            this.home = await (await response).json();
+            this.msg = this.home.name
+        }
 
     },
     mounted() {
+        this.homeworld
         document.getElementById("op2").style.borderBottom = 'solid rgb(191, 147, 0) 3px';
     },
     destroyed() {
@@ -60,13 +77,23 @@ export default {
     methods: {
         retroceder() {
             window.history.back();
-        }
+        },
+        getFilms() {
+            this.$store.state.infoFilm = this.home
+        },
+        setInfoPlanets() {
+            this.$store.state.infoPlanets = this.home
+            this.$router.push('/infoPlanets')
+        },   
+        setInfoResidents() {
+            this.$store.state.infoCharacters = this.home
+        },
     }
 
 }
 </script>
 
-<style>
+<style scoped>
 .caixa {
     background-color: black;
     height: max-content;
@@ -78,5 +105,12 @@ strong {
 
 p {
     color: rgb(133, 131, 131);
+}
+a{
+    color:rgb(133, 131, 131);
+    text-decoration: underline;
+}
+a:hover{
+    color:white;
 }
 </style>
