@@ -8,7 +8,7 @@
                 <div class="column has-text-left is-half mt-3">
                     <div class="box">
                         <div class="column">
-                            <p><strong>Model:</strong> {{ getInfoShips.model }}</p>
+                            <p class="is-size-3"><strong> {{ getInfoShips.model }}</strong></p>
                             <p><strong>Manufacturer:</strong> {{ getInfoShips.manufacturer }}</p>
                             <p><strong>Max speed:</strong> {{ getInfoShips.max_atmosphering_speed }} Km/h</p>
                             <p><strong>Cost:</strong> {{ getInfoShips.cost_in_credits }} credits</p>

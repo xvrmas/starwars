@@ -10,7 +10,7 @@
                 </div>
                 <div class="column has-text-left is-half mt-3">
                     <div class="box">
-                        <p><strong>Title: </strong> {{ infoFilm.title }}</p>
+                        <p class="is-size-3"><strong> {{ infoFilm.title }}</strong></p>
                         <p><strong>Director: </strong> {{ infoFilm.director }}</p>
                         <p><strong>Producer(s): </strong>{{ infoFilm.producer }}</p>
                         <p><strong>Release date: </strong>{{ orderDate }}</p>

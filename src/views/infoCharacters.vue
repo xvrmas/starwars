@@ -8,7 +8,7 @@
                 </div>
                 <div class="column has-text-left is-half mt-3">
                     <div class="box">
-                        <p><strong>Name: </strong> {{ getInfoCharacters.name }}</p>
+                        <p class="is-size-3"><strong> {{ getInfoCharacters.name }} </strong></p>
                         <p><strong>Gender: </strong>{{ getInfoCharacters.gender }}</p>
                         <p><strong>Birthday: </strong> {{
                             getInfoCharacters.birth_year

@@ -8,7 +8,7 @@
                 </div>
                 <div class="column has-text-left is-half mt-3">
                     <div class="box">
-                        <p><strong>Name: </strong> {{ getInfoPlanets.name }}</p>
+                        <p class="is-size-3"><strong> {{ getInfoPlanets.name }}</strong></p>
                         <p><strong>Diameter: </strong> {{ getInfoPlanets.diameter }}</p>
                         <p><strong>Rotation period: </strong> {{ getInfoPlanets.rotation_period }}</p>
                         <p><strong>Orbital period: </strong> {{ getInfoPlanets.orbital_period }}</p>

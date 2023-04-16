@@ -8,7 +8,7 @@
                 </div>
                 <div class="column has-text-left is-half mt-3">
                     <div class="box">
-                        <p><strong>Name: </strong> {{ getInfoSpecies.name }}</p>
+                        <p class="is-size-3"><strong> {{ getInfoSpecies.name }}</strong></p>
                         <p><strong>Classification: </strong> {{ getInfoSpecies.classification }}</p>
                         <p><strong>Designation: </strong> {{ getInfoSpecies.designation }}</p>
                         <p><strong>Averge height: </strong> {{ getInfoSpecies.average_height }} cm.

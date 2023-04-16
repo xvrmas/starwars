@@ -7,7 +7,7 @@
                 </div>
                 <div class="column has-text-left is-half mt-3">
                     <div class="box">
-                        <p><strong>Name: </strong> {{ getInfoVehicles.name }}</p>
+                        <p class="is-size-3"><strong>{{ getInfoVehicles.name }}</strong></p>
                         <p><strong>Model: </strong> {{ getInfoVehicles.model }}</p>
                         <p><strong>Vehicle class: </strong> {{ getInfoVehicles.vehicle_class }}</p>
                         <p><strong>Manufacturer: </strong> {{ getInfoVehicles.manufacturer }}</p>
