@@ -1,18 +1,17 @@
 <template>
     <div class="box">
-        <p class="titol is-size-5  is-bold">Related Pilots</p>
+        <p class="titol is-size-5  is-bold">Related Residents</p>
         <p class="is-size-4 m-5 has-text-gray-lighter"> {{ msg }}</p>
         <div class="columns is-multiline is-mobile is-centered ">
             <div v-for="(item, i) in personatges" :key="i">
                 <div class="carta">
                     <div>
                         <figure class="image">
-                            <img class="imatge"
-                                :src="require(`@/assets/characters/${item.url.split(/\D/g).join('')}.jpg`)"
+                            <img class="imatge" :src="require(`@/assets/characters/${item.url.split(/\D/g).join('')}.jpg`)"
                                 alt="image film">
                         </figure>
                         <a class="nav-link" @click="setInfo(item)">
-                           <p class="title has-text-grey-lighter is-size-6"> {{ item.name }}</p>
+                            <p class="title has-text-grey-lighter is-size-6"> {{ item.name }}</p>
 
                         </a>
                     </div>
@@ -25,12 +24,12 @@
 <script>
 import { mapGetters } from 'vuex'
 export default {
-    name: 'relatedPilots',
+    name: 'relatedResidents',
     data() {
         return {
             personatges: [],
             numImatge: '',
-            msg:''
+            msg: ''
         }
     },
     computed: {
@@ -48,13 +47,14 @@ export default {
             this.$store.dispatch('GET_INFOCHARACTERS', item)
         },
         async getcharacters() {
-            if(this.getInfoFilms.pilots.length == 0){
-                this.msg='Pilot not available'
-            }
-            for (let i = 0; i < this.getInfoFilms.pilots.length; i++) {
-                const response = fetch(this.getInfoFilms.pilots[i])
-                const infoCharaters = await (await response).json();
-                this.personatges.push(infoCharaters)
+            if (this.getInfoFilms.residents.length == 0) {
+                this.msg = 'Residents not available'
+            } else {
+                for (let i = 0; i < this.getInfoFilms.residents.length; i++) {
+                    const response = fetch(this.getInfoFilms.residents[i])
+                    const infoCharaters = await (await response).json();
+                    this.personatges.push(infoCharaters)
+                }
             }
         },
     }

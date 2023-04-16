@@ -6,10 +6,9 @@
                 <div class="carta">
                     <div>
                         <figure class="image ">
-                            <img :src="require(`@/assets/planets/${item.url.split(/\D/g).join('')}.jpg`)"
-                                alt="image film">
+                            <img :src="require(`@/assets/planets/${item.url.split(/\D/g).join('')}.jpg`)" alt="image film">
                         </figure>
-                        <a class="nav-link" @click="setInfo(item)">
+                        <a class="nav-link" @click="setInfo(item), setInfoResidents(item)">
                             <p class="title has-text-grey is-size-6"> {{ item.name }}</p>
                         </a>
                     </div>
@@ -40,6 +39,9 @@ export default {
             this.$store.state.infoPlanets = item
             this.$router.push('/infoPlanets')
             this.$store.dispatch('GET_INFOPLANET', item)
+        },
+        setInfoResidents(item) {
+            this.$store.state.infoCharacters = item
         },
         async getPlanetes() {
             for (let i = 0; i < this.getInfoFilms.planets.length; i++) {

@@ -1,6 +1,7 @@
 <template>
     <div class="box">
         <p class="titol is-size-4 is-bold">Related Vehicles</p>
+        <p class="is-size-4 m-5 has-text-gray-lighter"> {{ msg }}</p>
         <div class="columns is-multiline is-mobile is-centered ">
             <div v-for="(item, i) in vehicles" :key="i">
                 <div class="carta">
@@ -8,9 +9,9 @@
                         <figure class="image">
                             <img class="imatge"
                                 :src="(`https://starwars-visualguide.com/assets/img/vehicles/${item.url.split(/\D/g).join('')}.jpg`)"
-                                @error ="setErrorImg"  alt="image film">
+                                @error="setErrorImg" alt="image film">
                         </figure>
-                        <a class="nav-link" @click="setInfovehicles(item),showImageVehicle(item)">
+                        <a class="nav-link" @click="setInfovehicles(item), showImageVehicle(item)">
                             <p class="title has-text-grey is-size-6"> {{ item.name }}</p>
                         </a>
                     </div>
@@ -29,7 +30,8 @@ export default {
     },
     data() {
         return {
-            vehicles: []
+            vehicles: [],
+            msg: ''
         }
     },
     created() {
@@ -56,7 +58,9 @@ export default {
             this.$store.dispatch("GET_IMAGEVEHICLES", item)
         },
         async getVehicles() {
-            if (this.getInfoFilms.vehicles.length >= 1) {
+            if (this.getInfoFilms.starships.length == 0) {
+                this.msg = 'Vehicle not available'
+            } else {
                 for (let i = 0; i < this.getInfoFilms.vehicles.length; i++) {
                     const response = fetch(this.getInfoFilms.vehicles[i])
                     const infoVehicles = await (await response).json();

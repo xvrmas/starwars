@@ -19,6 +19,7 @@
                         <p><strong>Surface water: </strong> {{ getInfoPlanets.surface_water }}</p>
                     </div>
                     <relatedFilms></relatedFilms>
+                    <relatedResidentVue></relatedResidentVue>
                 </div>
             </div>
 
@@ -29,9 +30,10 @@
 <script>
 import { mapGetters } from 'vuex'
 import relatedFilms from '@/components/relatedFilms.vue';
+import relatedResidentVue from '@/components/relatedResident.vue'
 export default {
     name: 'infoPlanets',
-    components: { relatedFilms },
+    components: { relatedFilms,relatedResidentVue},
     computed: {
         ...mapGetters(['getInfoPlanets']),
 

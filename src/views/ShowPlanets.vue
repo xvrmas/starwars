@@ -10,7 +10,7 @@
                                     alt="image film">
                             </figure>
                             <a class="nav-link">
-                                <p style="color:gray" @click="setInfoPlanets(item),getFilms(item)" class="title is-size-5">{{
+                                <p style="color:gray" @click="setInfoPlanets(item),getFilms(item),setInfoResidents(item)" class="title is-size-5">{{
                                     item.name
                                 }}</p>
                             </a>
@@ -49,9 +49,8 @@ export default {
             this.$store.state.infoPlanets = item
             this.$router.push('/infoPlanets')
         },
-        setInfoFilms(item) {
+        setInfoResidents(item) {
             this.$store.state.infoCharacters = item
-            this.$router.push('/infoCharacters')
         },
         increasePage() {
             this.$store.state.pagePlanets++;
