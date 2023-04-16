@@ -5,7 +5,7 @@
         <div class="columns is-multiline is-mobile is-centered ">
             <div v-for="(item, i) in personatges" :key="i">
                 <div class="carta">
-                    <a >
+                    <a class="nav-link" @click="setInfo(item)" >
                         <figure class="image">
                             <img class="imatge" :src="require(`@/assets/characters/${item.url.split(/\D/g).join('')}.jpg`)"
                                 alt="image film">
