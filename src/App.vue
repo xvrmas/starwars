@@ -18,6 +18,10 @@ export default {
 }
 </script>
 <style>
+body{
+  background-color: black;
+
+}
 .border {
   background-color: black;
 }

@@ -64,8 +64,12 @@ const routes = [
     path: '/infoVehicles',
     name: 'infoVehicles',
     component: () => import('../views/infoVehicles.vue')
+  },
+  {
+    path: '/info',
+    name: 'info',
+    component: () => import('../views/info.vue')
   }
-
 
 ]
 const originalPush = VueRouter.prototype.push

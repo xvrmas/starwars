@@ -15,15 +15,15 @@
                 <a @click="starships(), showImageShip()" id="op5" class="boto_nav">Starships</a>
                 <a @click="showVehicles()" id="op6" class="boto_nav">Vehicles</a>
             </div>
-
         </div>
     </div>
 </template>
 
 <script>
+import info from '@/views/info.vue'
 export default {
     name: 'NavBar',
-
+    components: { info },
     data() {
         return {
             boton: document.getElementsByClassName("boto")
@@ -41,7 +41,7 @@ export default {
         },
         showImageShip() {
             this.$store.dispatch("GET_IMAGESHIPS")
-        },    
+        },
         showPeople() {
             this.$router.push('/showPeople')
             this.$store.dispatch('GET_PEOPLE')
@@ -59,9 +59,8 @@ export default {
             this.$store.dispatch('GET_VEHICLES')
         },
         info() {
-            alert('')
+            this.$router.push('info')            
         }
-
     }
 }
 </script>

@@ -10,7 +10,7 @@
                                 alt="image film">
                         </figure>
                         <div>
-                            <p class="title has-text-grey-lighter is-size-6"> {{ item.name }}</p>
+                            <p class="title has-text-grey is-size-6"> {{ item.name }}</p>
                         </div>
                     </a>
                 </div>

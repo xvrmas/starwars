@@ -98,7 +98,4 @@ export default {
 img {
     border-bottom: solid rgb(191, 147, 0) 3px;
 }
-/* .image{
-    background-attachment: inherit;
-} */
 </style>
