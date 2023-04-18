@@ -86,4 +86,7 @@ img {
     color: rgb(174, 171, 171);
 
 }
+.title{
+    text-align:center;
+}
 </style>

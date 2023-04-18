@@ -11,7 +11,7 @@
                                 alt="image film">
                         </figure>
                         <div>
-                            <p class="title has-text-grey-lighter is-size-6"> {{ item.name }}</p>
+                            <p class="title has-text-grey is-size-6"> {{ item.name }}</p>
                         </div>
                     </a>
                 </div>
@@ -81,5 +81,8 @@ img {
     border-bottom: solid rgb(191, 147, 0) 2px;
     color: rgb(174, 171, 171);
 
+}
+.title{
+    text-align:center;
 }
 </style>

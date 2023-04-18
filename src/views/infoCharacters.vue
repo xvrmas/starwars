@@ -113,9 +113,11 @@ p {
     color: rgb(133, 131, 131);
 }
 
-a {
-    color: rgb(133, 131, 131);
-    text-decoration: underline;
+a{
+    color: rgb(191, 147, 0);
+}
+a:hover{
+    color: rgb(248, 210, 85);
 }
 
 a:hover {

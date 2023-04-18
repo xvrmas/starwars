@@ -3,9 +3,9 @@
         <div class="container">
             <div class="box">
                 <div class="panel">
-                    <p>This website is part of an exercise in my training at the IT Academy in Barcelona.</p><br>
+                    <p class="has-text-grey">This website is part of an exercise in my training at the IT Academy in Barcelona.</p><br>
 
-                    <p> The information is taken from the api: <a target="_blank" href="https://swapi.dev/">swapi.dev</a> and from the web: <a target="_blank" href=" https://starwars-visualguide.com">
+                    <p class="has-text-grey"> The information is taken from the api: <a target="_blank" href="https://swapi.dev/">swapi.dev</a> and from the web: <a target="_blank" href=" https://starwars-visualguide.com">
                         starwars-visualguide</a></p>
                 </div>
                     <button class="button" @click="goBack()">X</button>
@@ -53,4 +53,5 @@ a:hover{
     box-shadow:1px 1px 3px 3px rgb(36, 36, 36);
 
 }
+
 </style>

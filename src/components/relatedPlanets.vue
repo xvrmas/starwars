@@ -64,4 +64,7 @@ img {
 .carta {
     height: 22vh;
 }
+.title{
+    text-align:center;
+}
 </style>

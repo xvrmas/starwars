@@ -82,6 +82,8 @@ export default {
     height: auto;
     margin: 8px;
     border-radius: 5%;
-
+}
+.title{
+    text-align:center;
 }
 </style>

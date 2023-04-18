@@ -2,7 +2,7 @@
     <div class="box">
         <p class="titol is-size-4 is-bold">Related Vehicles</p>
         <p class="is-size-4 m-5 has-text-gray-lighter"> {{ msg }}</p>
-        <div class="columns is-multiline is-mobile is-centered ">
+        <div class="columns is-multiline is-mobile is-centered">
             <div v-for="(item, i) in vehicles" :key="i">
                 <div class="carta">
                     <a class="nav-link" @click="setInfovehicles(item),setInfoPilots(item),showImageVehicle(item)">
@@ -80,5 +80,8 @@ export default {
     height: auto;
     margin: 8px;
     border-radius: 5%;
+}
+.title{
+    text-align:center;
 }
 </style>
