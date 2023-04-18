@@ -2,9 +2,13 @@
     <div>
         <div class="container">
             <div class="box">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus dolorum molestiae deleniti ea cupiditate facilis nihil harum velit fugiat quo, laboriosam rerum necessitatibus suscipit ipsum. Cum quam a optio magni?</p>
-            <b-button  class="is-rounded is-dark mt-5" @click="goBack()">close</b-button>
-            
+                <div class="panel">
+                    <p>This website is part of an exercise in my training at the IT Academy in Barcelona.</p><br>
+
+                    <p> The information is taken from the api: <a target="_blank" href="https://swapi.dev/">swapi.dev</a> and from the web: <a target="_blank" href=" https://starwars-visualguide.com">
+                        starwars-visualguide</a></p>
+                </div>
+                    <button class="button" @click="goBack()">X</button>
             </div>
         </div>
     </div>
@@ -20,6 +24,12 @@ export default {
 }
 </script>
 <style scoped>
+a{
+    color: rgb(191, 147, 0);
+}
+a:hover{
+    color: rgb(248, 210, 85);
+}
 .container {
     padding: 1%;
     background-color: black;
@@ -27,9 +37,20 @@ export default {
 
 .box {
     background-color: rgb(45, 45, 45);
-    padding:20vh;
+    /* padding: 20vh; */
     color: aliceblue;
 
 }
 
+.button {
+    margin: 3vh;
+    background-color: rgb(45, 45, 45);
+    color: white;
+}
+.panel{
+    padding: 20vh;
+    border:solid gray 0px;
+    box-shadow:1px 1px 3px 3px rgb(36, 36, 36);
+
+}
 </style>
