@@ -51,7 +51,6 @@ export default {
                 for (let i = 0; i < this.getInfoFilms.residents.length; i++) {
                     const response = fetch(this.getInfoFilms.residents[i])
                     const infoCharaters = await (await response).json();
-                    console.log('related resi', infoCharaters)
                     this.personatges.push(infoCharaters)
                 }
             } else {

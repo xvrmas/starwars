@@ -40,7 +40,7 @@ export default {
             let j = 0;
             let temp = '';
             if (this.getFilms.length == 0) {
-                console.log('')
+                console.log('Loading...')
             } else
                 while (i < this.getFilms.length) {
                     j = i + 1;

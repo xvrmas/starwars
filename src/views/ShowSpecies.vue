@@ -50,7 +50,6 @@ export default {
         },
         getFilms(item) {
             this.$store.state.infoFilm = item
-            console.log('show vehicles', item)
         },
         setInfoPeople(item) {
             this.$store.state.infoCharacters = item

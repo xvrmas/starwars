@@ -3,7 +3,7 @@
         <p class="titol is-size-4  is-bold">Related Films</p>
         <p class="is-size-4 m-5 has-text-gray-lighter"> {{ msg }}</p>
         <div class="columns is-multiline is-mobile is-centered ">
-            <div v-for="(item, i) in films " :key="i">
+            <div v-for="(item, i) in orderFilms " :key="i">
                 <div class="carta">
                     <a class="nav-link" @click="setInfo(item), showImageFilm(item)">
                         <figure class="image">
@@ -25,7 +25,28 @@ import { mapGetters } from 'vuex'
 export default {
     name: 'relatedFilms',
     computed: {
-        ...mapGetters(['getInfoFilms'])
+        ...mapGetters(['getInfoFilms']),
+        orderFilms() {
+            let i = 0;
+            let j = 0;
+            let temp = '';
+            if (this.films.length == 0) {
+                console.log('Loading...')
+            } else
+                while (i < this.films.length) {
+                    j = i + 1;
+                    while (j < this.films.length) {
+                        if (this.films[i].episode_id > this.films[j].episode_id) {
+                            temp = this.films[i];
+                            this.films[i] = this.films[j]
+                            this.films[j] = temp
+                        }
+                        j++;
+                    }
+                    i++;
+                }
+            return this.films;
+        },
     },
     data() {
         return {
@@ -40,11 +61,10 @@ export default {
 
 
     methods: {
+
         setInfo(item) {
             this.$store.state.infoFilm = item
             this.$router.push('/infoFilms')
-            console.log('related films', item)
-
         },
         showImageFilm: function (item) {
             this.$store.state.numImg = item.url.split(/\D/g).join('')
@@ -63,6 +83,11 @@ export default {
             }
         },
 
+    },
+    warch:{
+        orderFilms(){
+            this.fims;
+        }
     }
 }
 </script>

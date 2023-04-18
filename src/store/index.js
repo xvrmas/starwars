@@ -27,7 +27,7 @@ export default new Vuex.Store({
     numImg: 1,
     imageShips: '',
     imageFilm: '',
-    imageVehicles:''
+    imageVehicles: ''
   },
   getters: {
     getStarShips(state) {
@@ -70,7 +70,7 @@ export default new Vuex.Store({
     getImageFilm(state) {
       return state.imageFilm
     },
-    getImageVehicles(state){
+    getImageVehicles(state) {
       return state.imageVehicles
     },
     getInfoCharacters(state) {
@@ -131,7 +131,7 @@ export default new Vuex.Store({
     setInfoVehicles(state, setInfoVehiclesAction) {
       state.infoVehicles = setInfoVehiclesAction
     },
-    setImageVehicles(state, setimageVehiclesAction){
+    setImageVehicles(state, setimageVehiclesAction) {
       state.imageVehicles = setimageVehiclesAction
     }
 
@@ -154,7 +154,6 @@ export default new Vuex.Store({
       } catch (error) {
         console.log('error url imatge')
       }
-      console.log('image ship',imageShips)
     },
     async GET_INFOSTARSHIPS({ commit }, item) {
       const response = await fetch(item.url);
@@ -244,9 +243,9 @@ export default new Vuex.Store({
       } catch (error) {
         console.log('error url imatge')
       }
-      console.log('image ship',imageVehicles)
+      console.log('image ship', imageVehicles)
     },
-    
+
   },
   modules: {
   }
