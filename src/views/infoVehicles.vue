@@ -3,7 +3,7 @@
         <div class="container p-5">
             <div class="columns">
                 <div class="column is-half mt-3">
-                    <img :src="getImageVehicles" alt="image film">
+                    <img style="height: 63vh;" :src="getImageVehicles" alt="image film">
                 </div>
                 <div class="column has-text-left is-half mt-3">
                     <div class="box">
@@ -18,9 +18,15 @@
                         <p><strong>Max atmosphering speed: </strong> {{ getInfoVehicles.max_atmosphering_speed }}</p>
                         <p><strong>Cargo capacity: </strong> {{ getInfoVehicles.cargo_capacity }}</p>
                         <p><strong>Consumables: </strong> {{ getInfoVehicles.consumables }}</p><br>
-                        <relatedFilms></relatedFilms>
-                        <relatedPilots></relatedPilots>
                     </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <relatedFilms></relatedFilms>
+                </div>
+                <div class="column"> 
+                    <relatedPilots></relatedPilots>
                 </div>
             </div>
         </div>

@@ -3,7 +3,7 @@
         <div class="container p-5">
             <div class="columns">
                 <div class="column is-half mt-3">
-                    <img :src="require(`@/assets/characters/${getInfoCharacters.url.split(/\D/g).join('')}.jpg`)"
+                    <img style="height: 50vh;" :src="require(`@/assets/characters/${getInfoCharacters.url.split(/\D/g).join('')}.jpg`)"
                         alt="image film">
                 </div>
                 <div class="column has-text-left is-half mt-3">
@@ -31,11 +31,19 @@
                         <p><strong>Home world: </strong><a @click="setInfoPlanets(), setInfoResidents(), getFilms()">{{
                             msg
                         }}</a></p><br>
-                        <relatedFilms></relatedFilms>
-                        <relatedStarships></relatedStarships>
-                        <relatedvehicles></relatedvehicles>
-                        <relatedSpecies></relatedSpecies>
+
+
                     </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <relatedFilms></relatedFilms>
+                    <relatedStarships></relatedStarships>
+                </div>
+                <div class="column">
+                    <relatedvehicles></relatedvehicles>
+                    <relatedSpecies></relatedSpecies>
                 </div>
             </div>
         </div>
@@ -98,8 +106,8 @@ export default {
 .box {
     margin-top: 5px;
     background-color: rgb(45, 45, 45);
-    box-shadow:1px 1px 3px 3px rgb(36, 36, 36);
 }
+
 .caixa {
     background-color: black;
     height: max-content;
@@ -113,10 +121,11 @@ p {
     color: rgb(133, 131, 131);
 }
 
-a{
+a {
     color: rgb(191, 147, 0);
 }
-a:hover{
+
+a:hover {
     color: rgb(248, 210, 85);
 }
 

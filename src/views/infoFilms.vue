@@ -1,28 +1,31 @@
 <template>
     <div class="caixa">
-        <div class="container p-5">
+        <div class="container p-4">
             <div class="columns">
-                <div class="column is-half mt-3">
-                    <img :src="getImageFilm">
-                    <div class="mt-3">
-                    </div>
-
+                <div class="column is-half m-1">
+                    <img style="height: 60vh;" :src="getImageFilm">
                 </div>
-                <div class="column has-text-left is-half mt-3">
-                    <div class="box">
-                        <p class="is-size-3"><strong> {{ infoFilm.title }}</strong></p>
-                        <p><strong>Director: </strong> {{ infoFilm.director }}</p>
-                        <p><strong>Producer(s): </strong>{{ infoFilm.producer }}</p>
-                        <p><strong>Release date: </strong>{{ orderDate }}</p>
-                        <p><strong>Synopsis: </strong>{{ infoFilm.opening_crawl }}</p>
-                        <relatedCharacters></relatedCharacters>
-                        <relatedSpecies></relatedSpecies>
-                        <relatedPlanets></relatedPlanets>
-                        <relatedStarships></relatedStarships>
-                        <relatedvehicles></relatedvehicles>
-                    </div>     
+                <div class="box column has-text-left">
+                    <p class="is-size-3"><strong> {{ infoFilm.title }}</strong></p>
+                    <p><strong>Director: </strong> {{ infoFilm.director }}</p>
+                    <p><strong>Producer(s): </strong>{{ infoFilm.producer }}</p>
+                    <p><strong>Release date: </strong>{{ orderDate }}</p>
+                    <p><strong>Synopsis: </strong>{{ infoFilm.opening_crawl }}</p>
                 </div>
             </div>
+        </div>
+        <div class="columns m-1">
+            <div class="column">
+                <relatedSpecies></relatedSpecies>
+                <relatedPlanets></relatedPlanets>
+            </div>
+            <div class="column">
+                <relatedStarships></relatedStarships>
+                <relatedvehicles></relatedvehicles>
+            </div>
+        </div>
+        <div class="column m-1">
+            <relatedCharacters></relatedCharacters>
         </div>
     </div>
 </template>
@@ -57,8 +60,8 @@ export default {
 .box {
     margin-top: 5px;
     background-color: rgb(45, 45, 45);
-    box-shadow:1px 1px 3px 3px rgb(36, 36, 36);
 }
+
 p {
     color: rgb(133, 131, 131);
 }

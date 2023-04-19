@@ -3,7 +3,7 @@
         <div class="container p-5">
             <div class="columns">
                 <div class="column is-half mt-3">
-                    <img :src="require(`@/assets/planets/${getInfoPlanets.url.split(/\D/g).join('')}.jpg`)"
+                    <img style="height: 50vh;" :src="require(`@/assets/planets/${getInfoPlanets.url.split(/\D/g).join('')}.jpg`)"
                         alt="image film">
                 </div>
                 <div class="column has-text-left is-half mt-3">
@@ -17,12 +17,17 @@
                         <p><strong>Climate: </strong> {{ getInfoPlanets.climate }}</p>
                         <p><strong>Terrain: </strong> {{ getInfoPlanets.terrain }}</p>
                         <p><strong>Surface water: </strong> {{ getInfoPlanets.surface_water }}</p><br>
-                        <relatedFilms></relatedFilms>
-                        <relatedResidentVue></relatedResidentVue>
                     </div>
                 </div>
             </div>
-
+            <div class="columns">
+                <div class="column">
+                    <relatedFilms></relatedFilms>
+                </div>
+                <div class="column">
+                    <relatedResidentVue></relatedResidentVue>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -55,8 +60,8 @@ export default {
 .box {
     margin-top: 5px;
     background-color: rgb(45, 45, 45);
-    box-shadow:1px 1px 3px 3px rgb(36, 36, 36);
 }
+
 .caixa {
     background-color: black;
 }
