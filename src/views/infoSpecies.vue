@@ -2,7 +2,7 @@
     <div class="caixa">
         <div class="container p-5">
             <div class="columns">
-                <div class="column is-half mt-3">
+                <div class="column is-half mt-1">
                     <img style="height: 50vh;" :src="(`https://starwars-visualguide.com/assets/img/species/${getInfoSpecies.url.split(/\D/g).join('')}.jpg`)"
                         alt="image film">
                 </div>
@@ -61,7 +61,6 @@ export default {
 .box {
     margin-top: 5px;
     background-color: rgb(45, 45, 45);
-    box-shadow: 1px 1px 3px 3px rgb(36, 36, 36);
 }
 
 .caixa {

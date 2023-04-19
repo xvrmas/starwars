@@ -1,33 +1,34 @@
 <template>
     <div class="caixa">
-        <div class="container p-4">
+        <div class="container p-5">
             <div class="columns">
-                <div class="column is-half m-1">
+                <div class="column is-half m-3">
                     <img style="height: 60vh;" :src="getImageFilm">
                 </div>
-                <div class="box column has-text-left">
-                    <p class="is-size-3"><strong> {{ infoFilm.title }}</strong></p>
-                    <p><strong>Director: </strong> {{ infoFilm.director }}</p>
-                    <p><strong>Producer(s): </strong>{{ infoFilm.producer }}</p>
-                    <p><strong>Release date: </strong>{{ orderDate }}</p>
-                    <p><strong>Synopsis: </strong>{{ infoFilm.opening_crawl }}</p>
+                <div class="column has-text-left mt-3">
+                    <div class="box">
+                        <p class="is-size-3"><strong> {{ infoFilm.title }}</strong></p>
+                        <p><strong>Director: </strong> {{ infoFilm.director }}</p>
+                        <p><strong>Producer(s): </strong>{{ infoFilm.producer }}</p>
+                        <p><strong>Release date: </strong>{{ orderDate }}</p>
+                        <p><strong>Synopsis: </strong>{{ infoFilm.opening_crawl }}</p><br>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="columns m-1">
-            <div class="column">
-                <relatedPlanets></relatedPlanets>
-                <relatedCharacters></relatedCharacters>
-            </div>
-            <div class="column">
-                <relatedStarships></relatedStarships>
-                <relatedvehicles></relatedvehicles>
-                <relatedSpecies></relatedSpecies>
+            <div class="columns">
+                <div class="column">
+                    <relatedPlanets></relatedPlanets>
+                    <relatedCharacters></relatedCharacters>
+                </div>
+                <div class="column">
+                    <relatedStarships></relatedStarships>
+                    <relatedvehicles></relatedvehicles>
+                    <relatedSpecies></relatedSpecies>
+                </div>
             </div>
         </div>
     </div>
 </template>
-
 <script>
 import { mapGetters, mapState } from 'vuex'
 import relatedCharacters from '@/components/relatedCharacters.vue';

@@ -5,7 +5,7 @@
                 <div class="column is-half mt-3">
                     <img style="height: 63vh;" :src="getImageVehicles" alt="image film">
                 </div>
-                <div class="column has-text-left is-half mt-3">
+                <div class="column has-text-left is-half">
                     <div class="box">
                         <p class="is-size-3"><strong>{{ getInfoVehicles.name }}</strong></p>
                         <p><strong>Model: </strong> {{ getInfoVehicles.model }}</p>
@@ -61,7 +61,6 @@ export default {
 .box {
     margin-top: 5px;
     background-color: rgb(45, 45, 45);
-    box-shadow:1px 1px 3px 3px rgb(36, 36, 36);
 }
 
 .caixa {
