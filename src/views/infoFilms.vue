@@ -16,16 +16,14 @@
         </div>
         <div class="columns m-1">
             <div class="column">
-                <relatedSpecies></relatedSpecies>
                 <relatedPlanets></relatedPlanets>
+                <relatedCharacters></relatedCharacters>
             </div>
             <div class="column">
                 <relatedStarships></relatedStarships>
                 <relatedvehicles></relatedvehicles>
+                <relatedSpecies></relatedSpecies>
             </div>
-        </div>
-        <div class="column m-1">
-            <relatedCharacters></relatedCharacters>
         </div>
     </div>
 </template>
