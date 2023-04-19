@@ -1,6 +1,6 @@
 <template>
     <div class="box">
-        <p class="titol is-size-4 is-bold">Related starships</p>
+        <p class="titol is-size-4 has-text-left is-bold">Related starships</p>
         <p class="is-size-4 m-5 has-text-gray-lighter"> {{ msg }}</p>
         <div class="columns is-multiline is-mobile is-centered ">
             <div v-for="(item, i) in starships" :key="i">
