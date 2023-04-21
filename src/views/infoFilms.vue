@@ -3,7 +3,7 @@
         <div class="container p-5">
             <div class="columns">
                 <div class="column is-half mt-3">
-                    <img style="height: 60vh;" :src="getImageFilm">
+                    <img :src="getImageFilm">
                 </div>
                 <div class="column has-text-left is-half mt-3">
                     <div class="box">
