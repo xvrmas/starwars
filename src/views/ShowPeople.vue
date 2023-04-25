@@ -99,4 +99,11 @@ img {
 h1 {
     color: rgb(133, 131, 131)
 }
+@media (max-width: 845px) {
+    .card{
+        width: 19vh;
+        height: 35vh;
+        margin: 1vh;
+    }
+}
 </style>

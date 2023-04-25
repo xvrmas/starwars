@@ -88,4 +88,12 @@ img {
     border-bottom: solid rgb(191, 147, 0) 3px;
 
 }
+@media (max-width: 845px) {
+    .card{
+        width: 19vh;
+        height: 34vh;
+        margin: 1vh;
+    }
+  
+}
 </style>

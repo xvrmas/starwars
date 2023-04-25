@@ -86,4 +86,11 @@ export default {
 .title{
     text-align:center;
 }
+@media (max-width: 845px) {
+    .carta{
+        width: 17vh;
+        height: 18vh;
+        margin: 1vh;
+    }
+}
 </style>

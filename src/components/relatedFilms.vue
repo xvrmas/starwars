@@ -11,7 +11,8 @@
                                 alt="image film">
                         </figure>
                         <div>
-                            <p class="title has-text-grey is-size-6"> {{ item.title }}</p>
+                            <p class="title has-text-grey is-size-6"> Episode {{ item.episode_id }} <br> {{ item.title }} </p>
+                            
                         </div>
                     </a>
                 </div>
@@ -84,8 +85,8 @@ export default {
         },
 
     },
-    warch:{
-        orderFilms(){
+    warch: {
+        orderFilms() {
             this.fims;
         }
     }
@@ -115,7 +116,15 @@ img {
     color: rgb(174, 171, 171);
 
 }
-.title{
-    text-align:center;
+
+.title {
+    text-align: center;
+}
+
+@media (max-width: 845px) {
+    .title {
+        margin: 0px;
+    }
+
 }
 </style>

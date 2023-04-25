@@ -3,7 +3,7 @@
         <div class="container">
             <div class="box">
                 <div class="panel">
-                    <p class="has-text-grey">This website is part of an exercise in my training at the IT Academy in Barcelona.</p><br>
+                    <p class="has-text-grey">This website is an exercise in my training at the IT Academy in Barcelona.</p><br>
 
                     <p class="has-text-grey"> The information is taken from the api: <a target="_blank" href="https://swapi.dev/">swapi.dev</a> and from the web: <a target="_blank" href=" https://starwars-visualguide.com">
                         starwars-visualguide</a></p>
@@ -37,7 +37,6 @@ a:hover{
 
 .box {
     background-color: rgb(45, 45, 45);
-    /* padding: 20vh; */
     color: aliceblue;
 
 }
@@ -53,5 +52,10 @@ a:hover{
     box-shadow:1px 1px 3px 3px rgb(36, 36, 36);
 
 }
-
+@media (max-width: 845px) {
+   .panel{
+    padding: 5vh;
+   }
+  
+}
 </style>

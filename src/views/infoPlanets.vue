@@ -56,7 +56,7 @@ export default {
     }
 }
 </script>
-<style>
+<style scoped>
 .box {
     margin-top: 5px;
     background-color: rgb(45, 45, 45);
