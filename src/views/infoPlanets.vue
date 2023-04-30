@@ -3,7 +3,7 @@
         <div class="container p-5">
             <div class="columns">
                 <div class="column is-half mt-3">
-                    <img style="height: 50vh;" :src="require(`@/assets/planets/${getInfoPlanets.url.split(/\D/g).join('')}.jpg`)"
+                    <img style="height: 45vh;" :src="require(`@/assets/planets/${getInfoPlanets.url.split(/\D/g).join('')}.jpg`)"
                         alt="image film">
                 </div>
                 <div class="column has-text-left is-half mt-3">
